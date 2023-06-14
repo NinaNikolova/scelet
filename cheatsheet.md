@@ -17,3 +17,4 @@
     * add partials folder
     * render home page
     * fix static paths
+7. Add controllers /our actioons/folder with homeController
