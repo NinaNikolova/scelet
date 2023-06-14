@@ -13,4 +13,7 @@
     * add to express
     * config extension
     * config views folder (only if we use src)
-    * add layouts -main
+    * add layouts - main
+    * add partials folder
+    * render home page
+    * fix static paths
