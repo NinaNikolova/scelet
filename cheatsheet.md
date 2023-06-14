@@ -15,6 +15,7 @@
     * config views folder (only if we use src)
     * add layouts - main
     * add partials folder
+    * fix navigation to home page
     * render home page
     * fix static paths
 7. Add controllers /our actioons/folder with homeController
@@ -24,4 +25,6 @@
 9. Authentication
     * add userController
     * add controller to routes
-    * render login page
+    * fix header navigation to login, register, profile and logout
+    * render login, register and profile page
+10. Add user model
