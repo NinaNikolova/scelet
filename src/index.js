@@ -8,6 +8,7 @@ const routes = require('./routes')
 
 const app = express();
 // DB connect
+
 // TODO: change DB name
 mongoose.connect(`mongodb://127.0.0.1:27017/pets`)
 .then(()=> console.log('DB connected successfully'))
