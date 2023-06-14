@@ -1,20 +1,27 @@
 const express = require('express');
-const handlebars = require('express-handlebars')
-const path = require('path')
+const handlebars = require('express-handlebars');
+const path = require('path');
+const mongoose = require('mongoose')
 
 const routes = require('./routes')
 
 
 const app = express();
+// DB connect
+// TODO: change DB name
+mongoose.connect(`mongodb://127.0.0.1:27017/pets`)
+.then(()=> console.log('DB connected successfully'))
+.catch(err=> console.log('DB Error, ', err.message))
 
 
-// Config handlebars
+// Config expres with handlebars 
 app.engine('hbs', handlebars.engine({
     extname: 'hbs'
 }))
 app.set('view engine', 'hbs');
 // only with src-fplder
 app.set('views', 'src/views');
+
 
 
 app.use(express.static(path.resolve(__dirname, 'public')));

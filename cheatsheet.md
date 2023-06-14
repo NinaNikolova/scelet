@@ -18,3 +18,6 @@
     * render home page
     * fix static paths
 7. Add controllers /our actioons/folder with homeController
+8. Add database
+    * install mongoose
+    * connect database
