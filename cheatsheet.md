@@ -9,3 +9,8 @@
 4. Add static resources
 5. Add views folder with ready htmls
 6. Add express-handlebars view engine
+    * install express-handlebars
+    * add to express
+    * config extension
+    * config views folder (only if we use src)
+    * add layouts -main
