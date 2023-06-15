@@ -63,5 +63,9 @@
 21. Dynamic navigation
     * add conditional in main layout
     * add to res locals
+22. Error handling
+    * add 404 page
+    * redirect missing route to 404
+    * add global error handler (optional)
 
 
