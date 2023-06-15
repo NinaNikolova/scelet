@@ -46,6 +46,11 @@
 16. Generate jwt token
     * install jsonwebtoken
     * promisify jsonwebtoken
+    * create secret
+    * generate token in userManager.login
+17. Return token in cookie
+    * install cookie-parser
+    * config cookie-parser in index.js
    
 
 
