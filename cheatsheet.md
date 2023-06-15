@@ -43,6 +43,9 @@
 15. Login
     * find use by username
     * Validate password with hash
+16. Generate jwt token
+    * install jsonwebtoken
+    * promisify jsonwebtoken
    
 
 
