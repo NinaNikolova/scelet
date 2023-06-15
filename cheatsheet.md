@@ -40,6 +40,9 @@
 14. Hash password
     * install bcrypt and cookie-parser
     * hash password
+15. Login
+    * find use by username
+    * Validate password with hash
    
 
 
