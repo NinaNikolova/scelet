@@ -8,6 +8,7 @@ router.post('/login', async(req, res)=>{
     const {username, password} = req.body;
  
 const token = await userManager.login(username, password);
+res.cookie('token', token)
 res.redirect('/')
 
 
