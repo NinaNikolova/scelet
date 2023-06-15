@@ -64,15 +64,17 @@
     * add conditional in main layout
     * add to res locals
 22. Error handling
-    * add 404 page
+       * add 404 page
     * redirect missing route to 404
-    * add global error handler (optional)
+    * add global error handler (optional)+
+    * use global error handler after routes (optional) - in index.js
     * add error message extractor
 23. Show error notifications
     * add error container to main layout
     * show error container conditionaly
     * pass error to render
     * add local error handler in controllers
+24. Authomatically login after register
 
 
 
