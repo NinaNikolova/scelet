@@ -59,5 +59,9 @@
    * implement auth middleware
    * attach decodedToken to request
    * handle invalid token
+20. Authorization
+21. Dynamic navigation
+    * add conditional in main layout
+    * add to res locals
 
 
