@@ -4,6 +4,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser')
 
+const { auth } = require('./middlewares/authMiddleware')
 const routes = require('./routes')
 
 
@@ -12,8 +13,8 @@ const app = express();
 
 // TODO: change DB name
 mongoose.connect(`mongodb://127.0.0.1:27017/pets`)
-.then(()=> console.log('DB connected successfully'))
-.catch(err=> console.log('DB Error, ', err.message))
+    .then(() => console.log('DB connected successfully'))
+    .catch(err => console.log('DB Error, ', err.message))
 
 
 // Config expres with handlebars 
@@ -28,10 +29,12 @@ app.set('views', 'src/views');
 
 app.use(express.static(path.resolve(__dirname, 'public')));
 // parse body of forms and query strings
-app.use(express.urlencoded({extended: false}));
-app.use(cookieParser())
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+// after cookieParser because auth will use cookies
+app.use(auth);
 
 
 
 app.use(routes)
-app.listen('5000', ()=>console.log('Server is listening on port 5000...'))
+app.listen('5000', () => console.log('Server is listening on port 5000...'))

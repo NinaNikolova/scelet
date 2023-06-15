@@ -53,6 +53,11 @@
     * config cookie-parser in index.js
     * set cookie with token
 18. Logout
-   
+19. Authentication middleware
+   * create base middleware
+   * use middleware
+   * implement auth middleware
+   * attach decodedToken to request
+   * handle invalid token
 
 

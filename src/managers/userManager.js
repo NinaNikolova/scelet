@@ -1,7 +1,7 @@
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
 const jwt = require('../lib/jwt');
-const SECRET ='ddc474df-794d-4d08-8709-df543ea9f5af'
+const{ SECRET}= require('../config/config')
 
 exports.login = async (username, password) => {
     //  find user by username
