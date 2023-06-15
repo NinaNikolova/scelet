@@ -67,5 +67,10 @@
     * add 404 page
     * redirect missing route to 404
     * add global error handler (optional)
+    * add error message extractor
+23. Show error notifications
+    * add error container to main layout
+    * show error container conditionaly
+    * pass error to render
 
 
