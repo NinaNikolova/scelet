@@ -28,3 +28,15 @@
     * fix header navigation to login, register, profile and logout
     * render login, register and profile page
 10. Add user model
+    * add uniq index for username
+    * validate repeat password
+
+11. Modify login and register pages
+12. Add login and register post actions
+13. Add user manager
+    * require in user controller
+    * add register method
+    * validate if user already exists
+   
+
+
