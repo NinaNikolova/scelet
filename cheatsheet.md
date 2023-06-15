@@ -72,5 +72,15 @@
     * add error container to main layout
     * show error container conditionaly
     * pass error to render
+    * add local error handler in controllers
+
+
+
+
+
+
+    Search in files in Visual Studio Code    ctrl + p      /    :14  -> go to 14 line, @ -> search by character/
+    ctrl + t - open new tab
+    ctrl + w - close new tab
 
 

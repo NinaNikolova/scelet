@@ -1,35 +1,46 @@
 const router = require('express').Router();
 const userManager = require('../managers/userManager');
-const { TOKEN_KEY} = require('../config/config')
+const { TOKEN_KEY } = require('../config/config');
+const {getErrorMessage} = require('../utils/errorHelpers')
 
-router.get('/login', (req, res)=>{
+router.get('/login', (req, res) => {
     res.render('users/login')
 })
-router.post('/login', async(req, res)=>{
-    const {username, password} = req.body;
- 
-const token = await userManager.login(username, password);
-res.cookie(TOKEN_KEY, token)
-res.redirect('/')
+router.post('/login', async (req, res) => {
+    const { username, password } = req.body;
+try {
+        const token = await userManager.login(username, password);
+    res.cookie(TOKEN_KEY, token)
+    res.redirect('/')
+} catch (err) {
+    res.render('users/login', {error: getErrorMessage(err)})
+}
+
 
 
 })
-router.get('/register', (req, res)=>{
+router.get('/register', (req, res) => {
     res.render('users/register')
 })
-router.post('/register', async(req, res)=>{
-    const {username, email, password, repass} = req.body;
-    await userManager.register({username, email, password, repass})
+router.post('/register', async (req, res) => {
+    const { username, email, password, repass } = req.body;
+
+    try {
+          await userManager.register({ username, email, password, repass })
     res.redirect('/users/login')
+    } catch (err) {
+        res.render('users/register', {error: getErrorMessage(err)})
+    }
+  
 
 
 
 })
-router.get('/profile', (req, res)=>{
+router.get('/profile', (req, res) => {
     res.render('users/profile')
 })
-router.get('/logout', (req, res)=>{
+router.get('/logout', (req, res) => {
     res.clearCookie(TOKEN_KEY)
     res.redirect('/')
 })
-module.exports=router;
+module.exports = router;
