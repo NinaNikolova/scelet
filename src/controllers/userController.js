@@ -19,7 +19,7 @@ router.get('/register', (req, res)=>{
 router.post('/register', async(req, res)=>{
     const {username, email, password, repass} = req.body;
     await userManager.register({username, email, password, repass})
-    res.redirect('/')
+    res.redirect('/users/login')
 
 
 
@@ -28,6 +28,7 @@ router.get('/profile', (req, res)=>{
     res.render('users/profile')
 })
 router.get('/logout', (req, res)=>{
+    res.clearCookie('token')
     res.redirect('/')
 })
 module.exports=router;

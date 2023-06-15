@@ -52,6 +52,7 @@
     * install cookie-parser
     * config cookie-parser in index.js
     * set cookie with token
+18. Logout
    
 
 
